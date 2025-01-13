@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.lab{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
