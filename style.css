@@ -3,7 +3,24 @@
     padding: 0;
 }
 
+
 .lab{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    height: 70%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+header, footer{
+    height: 15%;
+    padding: 1rem;
+    border: 1px black solid;
     display: flex;
     margin: auto;
     justify-content: center;
