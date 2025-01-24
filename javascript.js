@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     let y = 1;
     let animating = false;
     let currentProgress = 0;
-    const speed = 1000000;
+    const speed = 4;
 
     function narisi() {
         const canvas = document.getElementById('canvas');
