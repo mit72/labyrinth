@@ -3,14 +3,6 @@
     padding: 0;
 }
 
-
-.lab{
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    height: 70%;
-}
-
 body {
     font-family: Arial, sans-serif;
     height: 100%;
