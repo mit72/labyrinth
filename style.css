@@ -3,29 +3,74 @@
     padding: 0;
 }
 
+
 body {
     font-family: Arial, sans-serif;
     height: 100%;
     width: 100%;
+    background-repeat: no-repeat;
+    background: cover;
+    background-attachment: fixed;
+    background:linear-gradient(45deg,rgba(239, 232, 223, 0.85), rgba(182, 210, 221, 0.85),rgba(222, 164, 189, 0.85),rgba(165, 129, 196, 0.85),rgba(170, 235, 152, 0.85),rgba(138, 220, 222, 0.85));
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
 }
 
-header{
-    height: 20vh;
-}
 #canvas{
     position: absolute;
-    z-index: 28263847;
+    z-index: 333;
     
 }
 
 .labry{
     max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.start-btn{
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+    margin-left: 10vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+button{
+    border: 1px solid rgb(127, 172, 255);
+    border-radius: 3px;
+    padding: 1vh;
+    background-color: rgb(255, 220, 253);
+    color: rgb(127, 172, 255);
+    margin: 10px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button:disabled{
+    color: red;
+    cursor: not-allowed;
+}
+
+@keyframes gradientAnimation {
+    0% {
+    background-position: 0% 50%;
+    }
+    50% {
+    background-position: 100% 50%;
+    }
+    100% {
+    background-position: 0% 50%;
+    }
 }
