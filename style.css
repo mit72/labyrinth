@@ -3,7 +3,6 @@
     padding: 0;
 }
 
-
 body {
     font-family: Arial, sans-serif;
     height: 100%;
@@ -19,7 +18,6 @@ body {
 #canvas{
     position: absolute;
     z-index: 333;
-    
 }
 
 .labry{

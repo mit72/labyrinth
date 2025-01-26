@@ -1,4 +1,3 @@
-
 //narisi
 document.addEventListener("DOMContentLoaded", function(event) {
     let x = 0;
@@ -90,13 +89,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 });
 
-
-
-
-
-
-
-
+//izbrisi
 document.addEventListener("DOMContentLoaded", function(event) {
     let xdel = 0;
     let ydel = 1;
@@ -175,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 });
 
-
+//oboje
 document.addEventListener("DOMContentLoaded", function(event) {
     let x = 0;
     let y = 1;
