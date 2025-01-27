@@ -21,7 +21,7 @@ V tem labirintu, ki je narisan kot svg, lahko na različne načine uprizorimo pr
 ![Slika labirinta z rešitvijo črte, ki se briše](img/readme3.png)
 
 
-## Authors
+## Avtor
 
 - [@Mitja Filej](https://www.github.com/mit72)
 
