@@ -14,11 +14,11 @@ V tem labirintu, ki je narisan kot svg, lahko na različne načine uprizorimo pr
 
 ## Screenshots
 
-![Slika labirinta](img/readme1)
+![Slika labirinta](img/readme1.png)
 
-![Slika labirinta z rešitvijo črte](img/readme2)
+![Slika labirinta z rešitvijo črte](img/readme2.png)
 
-![Slika labirinta z rešitvijo črte, ki se briše](img/readme3)
+![Slika labirinta z rešitvijo črte, ki se briše](img/readme3.png)
 
 
 ## Authors
