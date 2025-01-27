@@ -57,7 +57,7 @@ body {
 
 button{
     border: 1px solid rgb(127, 172, 255);
-    border-radius: 3px;
+    border-radius: 5px;
     padding: 1vh;
     background-color: rgb(255, 220, 253);
     color: rgb(127, 172, 255);
@@ -69,7 +69,7 @@ button:hover{
 }
 
 button:disabled{
-    color: red;
+    color: rgb(223,109,190);
     cursor: not-allowed;
 }
 
