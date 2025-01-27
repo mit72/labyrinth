@@ -12,7 +12,7 @@ body {
     background-attachment: fixed;
     background:linear-gradient(45deg,rgba(239, 232, 223, 0.85), rgba(182, 210, 221, 0.85),rgba(222, 164, 189, 0.85),rgba(165, 129, 196, 0.85),rgba(170, 235, 152, 0.85),rgba(138, 220, 222, 0.85));
     background-size: 300% 300%;
-    animation: gradientAnimation 10s ease infinite;
+    animation: gradientAnimation 15s ease infinite;
 }
 
 #canvas{
@@ -22,7 +22,7 @@ body {
 
 #lab-but{
     max-width: fit-content;
-    margin-left: 20vh;
+    margin-left: 22vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,13 +36,23 @@ body {
     height: 100vh;
 }
 
+#crta{
+    flex-direction: row;
+    border: 1px rgb(127, 172, 255) solid;
+    border-radius: 10px;
+}
+
 .btns{
     display: flex;
     justify-content: center;
-    margin-left: auto;
+    margin-left: 5px;
     margin-right: auto;
     align-items: center;
     flex-direction: column;
+    border: 1px rgb(127, 172, 255) solid;
+    border-radius: 10px;
+    padding: 2px;
+    background-color: rgba(202, 252, 255,0.2);
 }
 
 button{
