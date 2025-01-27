@@ -14,11 +14,11 @@ V tem labirintu, ki je narisan kot svg, lahko na različne načine uprizorimo pr
 
 ## Screenshots
 
-![Slika labirinta](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Slika labirinta](img/readme1)
 
-![Slika labirinta z rešitvijo črte](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Slika labirinta z rešitvijo črte](img/readme2)
 
-![Slika labirinta z rešitvijo črte, ki se briše](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Slika labirinta z rešitvijo črte, ki se briše](img/readme3)
 
 
 ## Authors
