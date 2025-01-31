@@ -1,3 +1,18 @@
+/* spreminjanje hitrosti*/ 
+const value = document.querySelector("#value");
+const input = document.querySelector("#myRange");
+value.textContent = input.value;
+input.addEventListener("input", (event) => {
+  value.textContent = event.target.value;
+});
+
+
+
+
+
+
+
+
 //narisi
 document.addEventListener("DOMContentLoaded", function(event) {
     let x = 0;
