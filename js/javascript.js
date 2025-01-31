@@ -1,17 +1,4 @@
-/* spreminjanje hitrosti*/ 
-const value = document.querySelector("#value");
-const input = document.querySelector("#myRange");
-value.textContent = input.value;
-input.addEventListener("input", (event) => {
-  value.textContent = event.target.value;
-});
-
-
-
-
-
-
-
+/*naredi slider delujoc! */
 
 //narisi
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -19,7 +6,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     let y = 1;
     let animating = false;
     let crta = 0;
-    const speed = 10;
+    /*const input = document.querySelector("#myRange");  dej to nekako not*/ 
+    
+    const speed = 1;
 
 
 
