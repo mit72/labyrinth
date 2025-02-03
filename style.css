@@ -6,8 +6,6 @@
 
 body {
     font-family: Arial, sans-serif;
-    height: 100%;
-    width: 100%;
     background-repeat: no-repeat;
     background: cover;
     background-attachment: fixed;
@@ -29,14 +27,15 @@ body {
     align-items: center;
 }
 
-#main {
+#main { 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-width: 100vh;
     min-height: 100vh;
 }
+
 
 #crta{
     flex-direction: row;
@@ -103,7 +102,7 @@ button:disabled{
 }
 
 input[type="range"]::-moz-range-track{
-    background: rgb(221, 139, 198);
+    background: linear-gradient(90deg,rgb(165, 129, 196),rgb(170, 235, 1525),rgb(138, 220, 222));
     height: 0.5rem;
     border: none;
     border-radius: 5px; 
@@ -111,7 +110,7 @@ input[type="range"]::-moz-range-track{
 }
 
 input[type="range"]::-webkit-slider-runnable-track{
-    background: rgb(221, 139, 198);;
+    background: linear-gradient(90deg,rgb(165, 129, 196),rgb(170, 235, 1525),rgb(138, 220, 222));
     height: 0.5rem;
     border: none;
     border-radius: 5px;  
