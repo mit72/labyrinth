@@ -4,13 +4,12 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: Arial, sans-serif;
-    background-repeat: no-repeat;
-    background: cover;
-    background-attachment: fixed;
+    background: cover fixed no-repeat;
     background:linear-gradient(45deg,rgba(239, 232, 223, 0.85), rgba(182, 210, 221, 0.85),rgba(222, 164, 189, 0.85),rgba(165, 129, 196, 0.85),rgba(170, 235, 152, 0.85),rgba(138, 220, 222, 0.85));
-    background-size: 300% 300%;
+    background-size: 300vh 300vw;
     animation: gradientAnimation 15s ease infinite;
 }
 
@@ -36,6 +35,13 @@ body {
     min-height: 100vh;
 }
 
+#title{
+    font-size: 2vh;
+}
+
+.qustn{
+    height: 4vh;
+}
 
 #crta{
     flex-direction: row;
@@ -54,6 +60,7 @@ body {
     border-radius: 10px;
     padding: 2px;
     background-color: rgba(202, 252, 255,0.2);
+    width: 13rem;
 }
 
 button{
