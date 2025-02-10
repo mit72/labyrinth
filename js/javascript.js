@@ -1,5 +1,5 @@
 //narisi
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
     let x = 0;
     let y = 1;
     let animating = false;
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 y += 2;
                 crta = 0;
             }
-            requestAnimationFrame(narisi); 
+            requestAnimationFrame(narisi);
         } else {
             //konec
 
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     }
 
-    document.getElementById('start').addEventListener('click', function() {
+    document.getElementById('start').addEventListener('click', function () {
         //zacetne vrednosti
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext("2d");
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         speed = input;
         //ko zacne animirat disable gumbe
         if (!animating) {
-            
+
             animating = true;
             this.disabled = true;
             document.getElementById("erase").disabled = true;
@@ -93,12 +93,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
             document.getElementById("sprite").disabled = true;
             document.getElementById("slika").disabled = true;
             narisi();
-        } 
+        }
     });
 });
 
 //izbrisi
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
     let xdel = 0;
     let ydel = 1;
     let animatingdel = false;
@@ -132,15 +132,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
             ctx.save();
             ctx.globalCompositeOperation = 'destination-out';
 
-            
+
             ctx.beginPath();
             ctx.moveTo(startX, startY);
             ctx.lineTo(vmesx, vmesy);
-            ctx.lineWidth = 6; 
+            ctx.lineWidth = 6;
             ctx.stroke();
             ctx.closePath();
 
-            
+
             ctx.beginPath();
             ctx.arc(startX, startY, ctx.lineWidth, 0, Math.PI * 2);
             ctx.fill();
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     }
 
-    document.getElementById('erase').addEventListener('click', function() {
+    document.getElementById('erase').addEventListener('click', function () {
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext("2d");
         xdel = 0;
@@ -186,12 +186,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 //oboje
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
     let x = 0;
     let y = 1;
     let animating = false;
     let crta = 0;
-    
+
 
     function narisi() {
         const canvas = document.getElementById('canvas');
@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         speed = input;
 
         if (x < resitev.length - 2) {
-            
+
             const startX = resitev[x];
             const startY = resitev[y];
             const endX = resitev[x + 2];
@@ -226,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             ctx.stroke();
             ctx.closePath();
 
-            
+
             ctx.fillStyle = "rgb(127, 172, 255)";
             ctx.fillRect(startX - ctx.lineWidth / 2, startY - ctx.lineWidth / 2, ctx.lineWidth, ctx.lineWidth);
 
@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 crta = 0;
             }
 
-            requestAnimationFrame(narisi); 
+            requestAnimationFrame(narisi);
         } else {
 
             const lastX = resitev[x];
@@ -244,7 +244,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             ctx.fillStyle = "rgb(127, 172, 255)";
             ctx.fillRect(lastX - ctx.lineWidth / 2, lastY - ctx.lineWidth / 2, ctx.lineWidth, ctx.lineWidth);
 
-            animating = false; 
+            animating = false;
         }
     }
 
@@ -277,15 +277,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
             ctx.save();
             ctx.globalCompositeOperation = 'destination-out';
 
-            
+
             ctx.beginPath();
             ctx.moveTo(startX, startY);
             ctx.lineTo(vmesx, vmesy);
-            ctx.lineWidth = 6; 
+            ctx.lineWidth = 6;
             ctx.stroke();
             ctx.closePath();
 
-            
+
             ctx.beginPath();
             ctx.arc(startX, startY, ctx.lineWidth, 0, Math.PI * 2);
             ctx.fill();
@@ -309,11 +309,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     }
 
-    document.getElementById('oboje').addEventListener('click', function() {
+    document.getElementById('oboje').addEventListener('click', function () {
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext("2d");
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
+
         let input = document.querySelector("#myRange").value;
         speed = input;
 
@@ -323,7 +323,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         xdel = 0;
         ydel = 1;
         crtadel = 0;
-    
+
         if (!animating && !animatingdel) {
             animating = true;
             animatingdel = true;
@@ -341,7 +341,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 //slika
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
     let x = 0;
     let y = 1;
     let animating = false;
@@ -358,7 +358,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         input = document.querySelector("#myRange").value;
         speed = input;
 
-        ctx.clearRect(0, 0, canvas.width, canvas.height); 
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         if (x < resitev.length - 2) {
             const startX = resitev[x];
@@ -375,7 +375,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             const vmesy = startY + (endY - startY) * crta;
 
             //narise sliko z izracunanim mestom, da je v sredini
-            ctx.drawImage(img, vmesx - img.width / 2, vmesy - img.height / 2); 
+            ctx.drawImage(img, vmesx - img.width / 2, vmesy - img.height / 2);
 
             if (crta >= 1) {
                 x += 2;
@@ -393,7 +393,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     }
 
-    document.getElementById('slika').addEventListener('click', function() {
+    document.getElementById('slika').addEventListener('click', function () {
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext("2d");
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -425,16 +425,16 @@ document.addEventListener("DOMContentLoaded", function () {
     let animating = false;
     let crta = 0;
 
-    const frameWidth = 16; 
-    const frameHeight = 16; 
-    const totalFrames = 8; 
-    let currentFrame = 0; 
-    const frameRate = 8; 
+    const frameWidth = 16;
+    const frameHeight = 16;
+    const totalFrames = 8;
+    let currentFrame = 0;
+    const frameRate = 8;
     let frameCounter = 0;
 
-    
+
     const sprite = new Image();
-    sprite.src = "img/cd_007_small_sprite.png"; 
+    sprite.src = "img/cd_007_small_sprite.png";
 
     function animateSprite() {
         const canvas = document.getElementById("canvas");
@@ -444,7 +444,7 @@ document.addEventListener("DOMContentLoaded", function () {
         input = document.querySelector("#myRange").value;
         speed = input;
 
-        ctx.clearRect(0, 0, canvas.width, canvas.height); 
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         if (x < resitev.length - 2) {
             const startX = resitev[x];
@@ -467,11 +467,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 currentFrame = (currentFrame + 1) % totalFrames;
             }
 
-            
+
             const frameX = (currentFrame * frameWidth) % sprite.width;
             const frameY = Math.floor((currentFrame * frameWidth) / sprite.width) * frameHeight;
 
-            
+
             ctx.drawImage(
                 sprite,
                 frameX,
