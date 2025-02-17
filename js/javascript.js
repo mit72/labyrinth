@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let crta = 0;
 
 
-
     function narisi() {
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext("2d");
@@ -16,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         input = document.querySelector("#myRange").value;
         speed = input;
+
 
         if (x < resitev.length - 2) {
             //vzame koordinate 
@@ -29,14 +29,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             //da crta se enako hitro premika
             crta += speed / dolzinaCrte;
-
+            
             //pr prevelikih hitrostih lahko črta rata prevelika ta linija to prepreči
             if (crta > 1) crta = 1;
 
             //izračuna nek vmesen x in y, ki bo bil narisan
             const vmesx = startX + (endX - startX) * crta;
             const vmesy = startY + (endY - startY) * crta;
-
+            
             //riše
             ctx.beginPath();
             ctx.moveTo(startX, startY);
@@ -467,7 +467,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 currentFrame = (currentFrame + 1) % totalFrames;
             }
 
-
+            //dobimo pravilen X in Y da bo v sredini
             const frameX = (currentFrame * frameWidth) % sprite.width;
             const frameY = Math.floor((currentFrame * frameWidth) / sprite.width) * frameHeight;
 

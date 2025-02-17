@@ -19,10 +19,16 @@ body {
 
 #lab-but {
     max-width: fit-content;
-    margin-left: 20vh;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.title{
+    margin-top: auto;
 }
 
 #main {
@@ -51,15 +57,15 @@ body {
 .btns {
     display: flex;
     justify-content: center;
-    margin-left: 5px;
-    margin-right: auto;
+    margin: 0 auto auto;
     align-items: center;
     flex-direction: column;
     border: 1px rgb(127, 172, 255) solid;
     border-radius: 10px;
     padding: 2px;
     background-color: rgba(202, 252, 255, 0.2);
-    width: 13rem;
+    width: 25rem;
+
 }
 
 button {
@@ -89,7 +95,8 @@ button:disabled {
     border-radius: 5px;
     padding: 1vh;
     background-color: rgb(255, 220, 253);
-    width: 100%;
+    width: 5rem;
+    height: 50vh;
 }
 
 .slidenumbers {
@@ -113,6 +120,9 @@ input[type="range"]::-moz-range-track {
     border: none;
     border-radius: 5px;
     width: 100%;
+    writing-mode: vertical-lr;
+    direction: rtl;
+    vertical-align: bottom;
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
@@ -121,6 +131,9 @@ input[type="range"]::-webkit-slider-runnable-track {
     border: none;
     border-radius: 5px;
     width: 100%;
+    writing-mode: vertical-lr;
+    direction: rtl;
+    vertical-align: bottom;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -144,7 +157,6 @@ input[type="range"]::-moz-range-thumb {
     width: 1rem;
 }
 
-
 .slider {
     -webkit-appearance: none;
     appearance: none;
@@ -167,23 +179,4 @@ input[type="range"]::-moz-range-thumb {
         background-position: 0% 50%;
     }
 }
-
-@media (max-width: 740px) {
-    #main {
-        width: 150vw; 
-    }
-}
-
-@media (max-width: 440px) {
-    #main {
-        width: 200vw; 
-    }
-}
-
-@media (min-width: 3500px) {
-    .btns{
-        width: 7vw;
-    }
-}
-
 
