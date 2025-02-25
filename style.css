@@ -94,7 +94,7 @@ button:disabled {
     border: 1px solid rgb(127, 172, 255);
     border-radius: 5px;
     padding: 1vh;
-    background-color: rgb(255, 220, 253);
+    background-color: rgba(202, 252, 255, 0.2);
     width: 5rem;
     height: 50vh;
 }
@@ -115,25 +115,23 @@ button:disabled {
 }
 
 input[type="range"]::-moz-range-track {
-    background: linear-gradient(90deg, rgb(165, 129, 196), rgb(170, 235, 1525), rgb(138, 240, 222));
-    height: 0.5rem;
+    background: linear-gradient(rgb(165, 129, 196), rgb(170, 235, 1525), rgb(138, 240, 222));
+    height: 80%;
+    width: 0.5rem; 
     border: none;
     border-radius: 5px;
-    width: 100%;
-    writing-mode: vertical-lr;
-    direction: rtl;
-    vertical-align: bottom;
+    writing-mode: vertical-lr; 
+    transform: rotate(270deg); 
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
-    background: linear-gradient(90deg, rgb(165, 129, 196), rgb(170, 235, 1525), rgb(138, 240, 222));
-    height: 0.5rem;
+    background: linear-gradient(rgb(165, 129, 196), rgb(170, 235, 1525), rgb(138, 240, 222));
+    height: 80%; 
+    width: 0.5rem; 
     border: none;
     border-radius: 5px;
-    width: 100%;
-    writing-mode: vertical-lr;
-    direction: rtl;
-    vertical-align: bottom;
+    writing-mode: vertical-lr; 
+    transform: rotate(270deg); 
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -155,16 +153,18 @@ input[type="range"]::-moz-range-thumb {
     border-radius: 10px;
     height: 1rem;
     width: 1rem;
-}
+} 
 
 .slider {
     -webkit-appearance: none;
     appearance: none;
-    width: 100%;
-    height: 1vh;
+    width: 1rem; 
+    height: 90%; 
     background: none;
     cursor: pointer;
-}
+    writing-mode: vertical-lr; /* kako slidas */
+    transform: rotate(270deg); 
+} 
 
 @keyframes gradientAnimation {
     0% {
@@ -179,4 +179,3 @@ input[type="range"]::-moz-range-thumb {
         background-position: 0% 50%;
     }
 }
-
