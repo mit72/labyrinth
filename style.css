@@ -117,24 +117,42 @@ button:disabled {
     justify-content: space-between;
 }
 
+input[type="range"] {
+    -webkit-appearance: none; 
+    appearance: none;
+    writing-mode: bt-lr; 
+    width: 0.5rem; 
+    height: 90%;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
 input[type="range"]::-moz-range-track {
     background: linear-gradient(rgb(165, 129, 196), rgb(170, 235, 1525), rgb(138, 240, 222));
-    height: 80%;
+    height: 100%;
     width: 0.5rem; 
     border: none;
     border-radius: 5px;
-    writing-mode: vertical-rl; 
-    transform: rotate(270deg); 
+} 
+
+input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: rgb(127, 172, 255);
+    border: 1px rgb(127, 172, 255) solid;
+    border-radius: 10px;
+    height: 1rem;
+    width: 1rem;
 } 
 
 input[type="range"]::-webkit-slider-runnable-track {
     background: linear-gradient(rgb(165, 129, 196), rgb(170, 235, 1525), rgb(138, 240, 222));
-    height: 80%; 
-    width: 0.5rem; 
+    height: 100%; 
+    width: 0.5px; 
     border: none;
     border-radius: 5px;
     writing-mode: vertical-lr; 
-    transform: rotate(270deg); 
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -147,27 +165,6 @@ input[type="range"]::-webkit-slider-thumb {
     /*margin-top = (track height in pixels = 8 / 2) - (thumb height in pixels = 16 /2)  da centeram thumb ce ne je prevec dol */
     margin-left: -4px;
 }
-
-input[type="range"]::-moz-range-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    background-color: rgb(127, 172, 255);
-    border: 1px rgb(127, 172, 255) solid;
-    border-radius: 10px;
-    height: 1rem;
-    width: 1rem;
-} 
-
-.slider {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 1rem; 
-    height: 90%; 
-    background: none;
-    cursor: pointer;
-    writing-mode: vertical-lr; /* kako slidas */
-    transform: rotate(270deg); 
-} 
 
 @keyframes gradientAnimation {
     0% {
