@@ -97,6 +97,9 @@ button:disabled {
     background-color: rgba(202, 252, 255, 0.2);
     width: 5rem;
     height: 50vh;
+    display: block;
+    align-items: center;
+    justify-content: center;
 }
 
 .slidenumbers {
@@ -120,9 +123,9 @@ input[type="range"]::-moz-range-track {
     width: 0.5rem; 
     border: none;
     border-radius: 5px;
-    writing-mode: vertical-lr; 
+    writing-mode: vertical-rl; 
     transform: rotate(270deg); 
-}
+} 
 
 input[type="range"]::-webkit-slider-runnable-track {
     background: linear-gradient(rgb(165, 129, 196), rgb(170, 235, 1525), rgb(138, 240, 222));
@@ -142,13 +145,13 @@ input[type="range"]::-webkit-slider-thumb {
     height: 1rem;
     width: 1rem;
     /*margin-top = (track height in pixels = 8 / 2) - (thumb height in pixels = 16 /2)  da centeram thumb ce ne je prevec dol */
-    margin-top: -4px;
+    margin-left: -4px;
 }
 
 input[type="range"]::-moz-range-thumb {
     -webkit-appearance: none;
     appearance: none;
-    background-color: rgb(255, 220, 253);
+    background-color: rgb(127, 172, 255);
     border: 1px rgb(127, 172, 255) solid;
     border-radius: 10px;
     height: 1rem;
