@@ -107,17 +107,11 @@ button:disabled {
     flex-direction: row;
     align-items: center;
     color: rgb(127, 172, 255);
-}
-
-#slidertitle {
     justify-content: center;
 }
 
-#numbers {
-    justify-content: space-between;
-}
-
 input[type="range"] {
+    margin-left: 1.5rem;
     -webkit-appearance: none; 
     appearance: none;
     writing-mode: bt-lr; 
@@ -129,7 +123,7 @@ input[type="range"] {
 }
 
 input[type="range"]::-moz-range-track {
-    background: linear-gradient(rgb(165, 129, 196), rgb(170, 235, 1525), rgb(138, 240, 222));
+    background: linear-gradient(rgb(138, 240, 222), rgb(170, 235, 1525), rgb(165, 129, 196));
     height: 100%;
     width: 0.5rem; 
     border: none;
@@ -147,7 +141,7 @@ input[type="range"]::-moz-range-thumb {
 } 
 
 input[type="range"]::-webkit-slider-runnable-track {
-    background: linear-gradient(rgb(165, 129, 196), rgb(170, 235, 1525), rgb(138, 240, 222));
+    background: linear-gradient(rgb(138, 240, 222), rgb(170, 235, 1525), rgb(165, 129, 196));
     height: 100%; 
     width: 0.5px; 
     border: none;
