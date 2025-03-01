@@ -6,7 +6,7 @@
 
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Fredoka', sans-serif;
     background: linear-gradient(45deg, rgba(239, 232, 223, 0.85), rgba(182, 210, 221, 0.85), rgba(222, 164, 189, 0.85), rgba(165, 129, 196, 0.85), rgba(170, 235, 152, 0.85), rgba(138, 220, 222, 0.85));
     background-size: 300% 300%;
     animation: gradientAnimation 15s ease infinite;
@@ -19,16 +19,33 @@ body {
 
 #lab-but {
     max-width: fit-content;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 3rem;
+    margin: 0 auto 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.title{
+.titlecontainer {
     margin-top: auto;
+}
+
+/* LAYERD TEXT ZA NAREDIT OUTLINE NA CUSTOM FONTU */
+/* MAIN TEXT*/
+.nameTitle {
+    color: rgb(255, 220, 253);
+    font-size: 50px;
+    position: relative;
+}
+
+/* LAYERD TEXT ODZADAJ Z-INDEX POMEMBEN, VECJI WEBKIT TEXT STROKE DEBELJESI OUTLINE*/
+.nameTitle::before {
+    content: "Mijta's Labyrinth";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    color: rgb(127, 172, 255);
+    -webkit-text-stroke: 6px rgb(127, 172, 255);
 }
 
 #main {
@@ -65,7 +82,6 @@ body {
     padding: 2px;
     background-color: rgba(202, 252, 255, 0.2);
     width: 25rem;
-
 }
 
 button {
@@ -75,6 +91,7 @@ button {
     background-color: rgb(255, 220, 253);
     color: rgb(127, 172, 255);
     margin: 10px;
+    font-family: 'Fredoka', sans-serif;
 }
 
 button:hover {
@@ -112,10 +129,10 @@ button:disabled {
 
 input[type="range"] {
     margin-left: 1.5rem;
-    -webkit-appearance: none; 
+    -webkit-appearance: none;
     appearance: none;
-    writing-mode: bt-rl; 
-    width: 0.5rem; 
+    writing-mode: bt-rl;
+    width: 0.5rem;
     height: 90%;
     background: none;
     outline: none;
@@ -125,10 +142,10 @@ input[type="range"] {
 input[type="range"]::-moz-range-track {
     background: linear-gradient(rgb(138, 240, 222), rgb(170, 235, 1525), rgb(165, 129, 196));
     height: 100%;
-    width: 0.5rem; 
+    width: 0.5rem;
     border: none;
     border-radius: 5px;
-} 
+}
 
 input[type="range"]::-moz-range-thumb {
     -webkit-appearance: none;
@@ -138,15 +155,15 @@ input[type="range"]::-moz-range-thumb {
     border-radius: 10px;
     height: 1rem;
     width: 1rem;
-} 
+}
 
 input[type="range"]::-webkit-slider-runnable-track {
-    background: linear-gradient(rgb(165, 129, 196), rgb(170, 235, 1525), rgb(138, 240, 222) );
-    height: 100%; 
-    width: 0.5px; 
+    background: linear-gradient(rgb(165, 129, 196), rgb(170, 235, 1525), rgb(138, 240, 222));
+    height: 100%;
+    width: 0.5px;
     border: none;
     border-radius: 5px;
-    writing-mode: vertical-lr; 
+    writing-mode: vertical-lr;
     transform: rotate(180deg);
 }
 

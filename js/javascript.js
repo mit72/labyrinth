@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let animating = false;
     let crta = 0;
     let audio = document.getElementById("muzik");
-
+    
+    
     function narisi() {
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext("2d");
@@ -92,6 +93,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             this.disabled = true;
             audio.currentTime = 0;
             audio.play();
+            audio.volume = 0.2;
             document.getElementById("erase").disabled = true;
             document.getElementById("oboje").disabled = true;
             document.getElementById("sprite").disabled = true;
@@ -182,6 +184,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         if (!animatingdel) {
             audio.currentTime = 0;
             audio.play();
+            audio.volume = 0.2;
             animatingdel = true;
             this.disabled = true;
             document.getElementById("start").disabled = true;
@@ -337,6 +340,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         if (!animating && !animatingdel) {
             audio.currentTime = 0;
             audio.play();
+            audio.volume = 0.2;
             animating = true;
             animatingdel = true;
             this.disabled = true;
@@ -422,6 +426,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         if (!animating) {
             audio.currentTime = 0;
             audio.play();
+            audio.volume = 0.2;
             animating = true;
             this.disabled = true;
             document.getElementById("start").disabled = true;
@@ -533,6 +538,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!animating) {
             audio.currentTime = 0;
             audio.play();
+            audio.volume = 0.2;
             animating = true;
             this.disabled = true;
             document.getElementById("start").disabled = true;

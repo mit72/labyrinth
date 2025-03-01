@@ -17,7 +17,7 @@ Na teji strani imam labirint narisan kot svg, v katerem z več različnimi nači
 
 ## Slike
 
-![Slika labirinta](img/readme-1.png)
+![Slika labirinta](img/readme1.png)
 
 ![Slika labirinta z rešitvijo črte](img/readme2.png)
 
