@@ -113,6 +113,10 @@ button:disabled {
     padding-left: 4vh;
 }
 
+#slower{
+    cursor: pointer;
+}
+
 .slidecontainer {
     border: 1px solid rgb(127, 172, 255);
     border-radius: 5px;
