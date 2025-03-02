@@ -569,3 +569,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 });
+
+document.getElementById('slower').addEventListener('click', function() {
+    document.getElementById('audioFileInput').click();
+});
+
+document.getElementById('audioFileInput').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const audioElement = document.getElementById('muzik');
+        const sourceElement = audioElement.querySelector('source');
+        sourceElement.src = URL.createObjectURL(file);
+        audioElement.load();
+    }
+});
