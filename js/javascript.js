@@ -489,7 +489,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 currentFrame = (currentFrame + 1) % totalFrames;
             }
 
-            //dobimo pravilen X in Y da bo v sredini
+            //dobimo pravilen frame
             const frameX = (currentFrame * frameWidth) % sprite.width;
             const frameY = Math.floor((currentFrame * frameWidth) / sprite.width) * frameHeight;
 
