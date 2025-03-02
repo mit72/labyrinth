@@ -25,8 +25,14 @@ body {
     align-items: center;
 }
 
+.labry{
+    margin-left: 7vh;
+    margin-right: 1vh;
+}
+
 .titlecontainer {
     margin-top: auto;
+    margin-bottom: 1vh;
 }
 
 /* LAYERD TEXT ZA NAREDIT OUTLINE NA CUSTOM FONTU */
@@ -37,7 +43,7 @@ body {
     position: relative;
 }
 
-/* LAYERD TEXT ODZADAJ Z-INDEX POMEMBEN, VECJI WEBKIT TEXT STROKE DEBELJESI OUTLINE*/
+/* LAYERD TEXT ODZADAJ Z-INDEX POMEMBEN, VECJI WEBKIT TEXT STROKE DEBELJESI OUTLINE */
 .nameTitle::before {
     content: "Mijta's Labyrinth";
     position: absolute;
@@ -113,7 +119,7 @@ button:disabled {
     padding: 1vh;
     background-color: rgba(202, 252, 255, 0.2);
     width: 5rem;
-    height: 50vh;
+    height: 484px;
     display: block;
     align-items: center;
     justify-content: center;
