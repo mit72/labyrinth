@@ -549,3 +549,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const asterisk = document.querySelector('.nameTitle');
+
+    asterisk.addEventListener('click', () => {
+
+        Swal.fire({
+            title: 'Author',
+            text: 'Mitja Filej, 4. Rb',
+            color: 'rgb(127, 172, 255)',
+            icon: 'info',
+            iconColor: 'rgb(255, 220, 253)',
+            confirmButtonText: 'OK',
+            customClass: {
+                confirmButton: 'btn-sa',
+            }
+        });
+
+    });
+});
