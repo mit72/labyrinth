@@ -45,7 +45,7 @@ body {
 
 /* LAYERD TEXT ODZADAJ Z-INDEX POMEMBEN, VECJI WEBKIT TEXT STROKE DEBELJESI OUTLINE */
 .nameTitle::before {
-    content: "Mijta's Labyrinth";
+    content: "Mitja's Labyrinth";
     position: absolute;
     top: 0;
     left: 0;
