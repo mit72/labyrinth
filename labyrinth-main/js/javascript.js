@@ -4,9 +4,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let y = 1;
     let animating = false;
     let crta = 0;
-    let audio = document.getElementById("muzik");
-    
-    
+
+
     function narisi() {
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext("2d");
@@ -66,7 +65,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
             ctx.fillRect(lastX - ctx.lineWidth / 2, lastY - ctx.lineWidth / 2, ctx.lineWidth, ctx.lineWidth);*/
             //nazaj enabla gumbe
             animating = false;
-            audio.pause();
             document.getElementById('start').disabled = false;
             document.getElementById('oboje').disabled = false;
             document.getElementById('erase').disabled = false;
@@ -85,15 +83,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
         crta = 0;
         let input = document.querySelector("#myRange").value;
         speed = input;
-        
         //ko zacne animirat disable gumbe
         if (!animating) {
 
             animating = true;
             this.disabled = true;
-            audio.currentTime = 0;
-            audio.play();
-            audio.volume = 0.2;
             document.getElementById("erase").disabled = true;
             document.getElementById("oboje").disabled = true;
             document.getElementById("sprite").disabled = true;
@@ -109,7 +103,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let ydel = 1;
     let animatingdel = false;
     let crtadel = 0;
-    let audio = document.getElementById("muzik");
 
     function izbrisi() {
         const canvas = document.getElementById('canvas');
@@ -163,7 +156,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             requestAnimationFrame(izbrisi);
         } else {
-            audio.pause();
             animatingdel = false;
             document.getElementById('start').disabled = false;
             document.getElementById('oboje').disabled = false;
@@ -182,9 +174,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         speed = input;
 
         if (!animatingdel) {
-            audio.currentTime = 0;
-            audio.play();
-            audio.volume = 0.2;
             animatingdel = true;
             this.disabled = true;
             document.getElementById("start").disabled = true;
@@ -202,7 +191,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let y = 1;
     let animating = false;
     let crta = 0;
-    let audio = document.getElementById("muzik");
 
 
     function narisi() {
@@ -250,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             requestAnimationFrame(narisi);
         } else {
-            
+
             const lastX = resitev[x];
             const lastY = resitev[y];
             ctx.fillStyle = "rgb(127, 172, 255)";
@@ -313,7 +301,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             requestAnimationFrame(izbrisi);
         } else {
-            audio.pause();
             animatingdel = false;
             document.getElementById('start').disabled = false;
             document.getElementById('oboje').disabled = false;
@@ -338,9 +325,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         crtadel = 0;
 
         if (!animating && !animatingdel) {
-            audio.currentTime = 0;
-            audio.play();
-            audio.volume = 0.2;
             animating = true;
             animatingdel = true;
             this.disabled = true;
@@ -350,7 +334,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             document.getElementById("slika").disabled = true;
             narisi();
             //kliče metodo  izbrisi po 1000ms
-            setTimeout(() => izbrisi(), 1000 / speed);
+            setTimeout(() => izbrisi(), 1000);
         }
     });
 });
@@ -362,7 +346,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let y = 1;
     let animating = false;
     let crta = 0;
-    let audio = document.getElementById("muzik");
 
     const img = new Image();
     img.src = 'img/cd_007_small.gif';
@@ -402,7 +385,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             requestAnimationFrame(moveImage);
         } else {
-            audio.pause();
             animating = false;
             document.getElementById("start").disabled = false;
             document.getElementById("slika").disabled = false;
@@ -424,9 +406,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         speed = input;
 
         if (!animating) {
-            audio.currentTime = 0;
-            audio.play();
-            audio.volume = 0.2;
             animating = true;
             this.disabled = true;
             document.getElementById("start").disabled = true;
@@ -445,7 +424,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let y = 1;
     let animating = false;
     let crta = 0;
-    let audio = document.getElementById("muzik");
 
     const frameWidth = 16;
     const frameHeight = 16;
@@ -489,7 +467,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 currentFrame = (currentFrame + 1) % totalFrames;
             }
 
-            //dobimo pravilen frame
+            //dobimo pravilen X in Y da bo v sredini
             const frameX = (currentFrame * frameWidth) % sprite.width;
             const frameY = Math.floor((currentFrame * frameWidth) / sprite.width) * frameHeight;
 
@@ -514,7 +492,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             requestAnimationFrame(animateSprite);
         } else {
-            audio.pause();
             animating = false;
             document.getElementById("start").disabled = false;
             document.getElementById("slika").disabled = false;
@@ -536,9 +513,6 @@ document.addEventListener("DOMContentLoaded", function () {
         speed = input;
 
         if (!animating) {
-            audio.currentTime = 0;
-            audio.play();
-            audio.volume = 0.2;
             animating = true;
             this.disabled = true;
             document.getElementById("start").disabled = true;
@@ -548,38 +522,4 @@ document.addEventListener("DOMContentLoaded", function () {
             animateSprite();
         }
     });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const asterisk = document.querySelector('.credits');
-
-    asterisk.addEventListener('click', () => {
-
-        Swal.fire({
-            title: 'Author',
-            text: 'Mitja Filej, 4.RB',
-            color: 'rgb(127, 172, 255)',
-            icon: 'info',
-            iconColor: 'rgb(255, 220, 253)',
-            confirmButtonText: 'OK',
-            customClass: {
-                confirmButton: 'btn-sa',
-            }
-        });
-
-    });
-});
-
-document.getElementById('slower').addEventListener('click', function() {
-    document.getElementById('audioFileInput').click();
-});
-
-document.getElementById('audioFileInput').addEventListener('change', function(event) {
-    const file = event.target.files[0];
-    if (file) {
-        const audioElement = document.getElementById('muzik');
-        const sourceElement = audioElement.querySelector('source');
-        sourceElement.src = URL.createObjectURL(file);
-        audioElement.load();
-    }
 });
