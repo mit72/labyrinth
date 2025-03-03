@@ -13,7 +13,7 @@ V tem labirintu, ki je narisan kot svg, lahko na različne načine uprizorimo pr
 
 ## Opis
 
-Na teji strani imam labirint narisan kot svg, v katerem z več različnimi načini lahko rešiš labirint. Prvi način je ravna modra črta, ki jo je možno izbristai z gumbom, po tem ko je narisana. Drugi način je z črto, ki se briše sama za sabo. Tretji in četrti način pa vsebujeta element, ki se premika skozi labirint. V tretji opciji je samo slika, ki se premika skozi labirint. V četrti opciji sem uporabil tehniko sprite animation, ki v eni slilki ima shranjenih več majnših sličic, ki se menjajo. Hitrost reševanja labirinta je možno tudi upravljati z sliderjem ob labirintu. Ko se labirint rešuje se tudi predvaja glasba.
+Na teji strani imam labirint narisan kot svg, v katerem z več različnimi načini lahko rešiš labirint. Prvi način je ravna modra črta, ki jo je možno izbristai z gumbom, po tem ko je narisana. Drugi način je z črto, ki se briše sama za sabo. Tretji in četrti način pa vsebujeta element, ki se premika skozi labirint. V tretji opciji je samo slika, ki se premika skozi labirint. V četrti opciji sem uporabil tehniko sprite animation, ki v eni slilki ima shranjenih več majnših sličic, ki se menjajo. Hitrost reševanja labirinta je možno tudi upravljati z sliderjem ob labirintu. Ko se labirint rešuje se tudi predvaja glasba. Labirintu lahko tudi sami izberemo glasbo z klikom na tekst "Slower".
 
 ## Slike
 

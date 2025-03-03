@@ -37,21 +37,32 @@ body {
 
 /* LAYERD TEXT ZA NAREDIT OUTLINE NA CUSTOM FONTU */
 /* MAIN TEXT*/
-.nameTitle {
+.nameTitle, .nameTitle2, .credits {
     color: rgb(255, 220, 253);
     font-size: 50px;
     position: relative;
 }
 
 /* LAYERD TEXT ODZADAJ Z-INDEX POMEMBEN, VECJI WEBKIT TEXT STROKE DEBELJESI OUTLINE */
-.nameTitle::before {
-    content: "Mitja's Labyrinth";
+.nameTitle::before, .nameTitle2::before, .credits::before {
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
     color: rgb(127, 172, 255);
     -webkit-text-stroke: 6px rgb(127, 172, 255);
+}
+
+.nameTitle::before{
+    content: "Mitja";
+}
+
+.nameTitle2::before {
+    content: "s Labyrinth";
+}
+
+.credits::before{
+    content: "'";
 }
 
 #main {
@@ -198,7 +209,7 @@ input[type="range"]::-webkit-slider-thumb {
     font-family: 'Fredoka', sans-serif;
 }
 
-.nameTitle:hover{
+.credits:hover{
     cursor: pointer;
 }
 
